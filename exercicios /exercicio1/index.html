@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiro script</title>
+    <style>
+        body {
+            background-color: skyblue;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        img{
+            height:100% ;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro script em JS</h1>
+    <ol>
+        <li>Este é um script simples em JavaScript que é executado quando a página HTML é carregada.</li>
+        <li>O script começa com a função window.alert(), que exibe uma caixa de diálogo com uma mensagem para o usuário. A mensagem é "Olá, mundo!, este é o meu primeiro script em JS! Ele usa a função window.alert() para mostrar uma mensagem na tela!"</li>
+        <li>Em seguida, a função window.prompt() é usada para solicitar ao usuário que insira seu nome. O valor inserido pelo usuário é armazenado na variável name.</li>
+        <li>A função window.alert() é usada novamente para saudar o usuário pelo nome e dar as boas-vindas ao script.</li>
+        <li>Depois disso, a função confirm() é usada para perguntar ao usuário se ele gostaria de ver o código-fonte do script.</li>
+        <li>Se o usuário clicar em "OK", uma nova janela ou aba será aberta com o código-fonte da página atual, graças à função window.open().</li>
+        <li>Se o usuário clicar em "Cancelar", uma mensagem de despedida será exibida e a janela atual será fechada usando a função window.close().</li>
+    </ol>
+    <img src="code.png" alt="">
+</body>
+<script>
+    window.alert("Olá, mundo!, este é o meu primeiro script em JS! Ele usa a função window.alert() para mostrar uma mensagem na tela!");
+    var name= window.prompt("Qual é o seu nome?");
+    window.alert("Olá, " + name + "! Seja bem-vindo(a) ao meu primeiro script em JS!");
+    if (confirm("Você gostaria de ver o código fonte deste script?")) {
+        window.alert("Claro! Vamos lá!");
+        window.open("view-source:/Users/eltobrgs/Documents/Programaçao/curso-em-video-javascript/exercicios/exercicio1/index.html");} 
+    else {
+        window.alert("Tudo bem! Até a próxima!");
+        window.close();
+    }
+
+    
+    
+</script>
+</html>

@@ -1,0 +1,900 @@
+// Curso Javascript Completo 2020 [Iniciantes] + 14 Mini-Projetos
+// https://www.youtube.com/watch?v=i6Oi-YtXnAU
+
+let pessoa = {
+  nome: 'Pedrinho',
+  idade: 12
+}
+
+// Arrays
+let array = [18, 20, 17, 45]
+
+console.log(array.length);
+console.log(array[0]);
+
+
+// Functions (verbo + substantivo)
+let corSite = 'azul';
+function resetaCor(cor) {
+  corSite = cor;
+}
+
+resetaCor('vermelho')
+
+// Realizar uma tarefa, não devolve nada
+function dizerNome() {
+  console.log('Pedrinho');
+}
+
+dizerNome()
+
+// Faz um cálculo e retorna algo
+function multiplicarPorDois(valor) {
+  return valor * 2
+}
+
+let resultado = multiplicarPorDois(5)
+
+console.log(resultado);
+
+
+// Operadores lógicos
+
+// Operadores aritméticos
+let salario = 1000
+
+// + - * / **
+console.log(salario + salario);
+
+// Operadores de incremento e decremento
+// ++ --
+let idade = 18
+console.log(++idade);
+
+
+// Operadores de atribuição
+let valorTeclado = 100
+valorTeclado += valorTeclado
+console.log(valorTeclado);
+// 200
+
+
+// Operadores de comparação
+// Igualdade estrita
+console.log(1 === 1);
+console.log('1' === 1); // Mais recomendado
+
+// Igualdade solta
+console.log(1 == 1);
+console.log('1' == 1); // Não recomendado
+
+
+// Operador ternário
+// Tem um cliente, 100 premium, senão comum.
+let pontos = 100
+let tipo = pontos > 100 ? 'premium' : 'comum'
+
+// Operadores lógicos
+// E (&&)
+console.log(true && true); // true
+
+// OU (||)
+console.log(true || false); // true
+console.log(false || false); // false
+
+// NOT (!)
+let sim = true
+console.log(!sim); // false
+
+
+// Comparação com valores não booleanos
+console.log(false || true) // true
+console.log(false || 'Pedrinho') // "Pedrinho"
+console.log(false || 1) // 1
+
+// Operadores bitwise
+// Falsy
+// undefined, null, 0, false, '', NaN
+
+// Truthy
+// Retorna tudo que não for falsy.
+
+
+// Trocando valores de variáveis
+let a = 'vermelho'
+let b = 'azul'
+let c = a
+a = b
+b = c
+
+// If Else
+// Se a hora estiver entre 06:00 e até 12:00, então Bom dia!
+// Se a hora estiver entre 12:00 e até 18:00, então Boa tarde!
+// Caso contrário, então Boa noite!
+
+if (condicao) {
+  // code
+} else if (outraCondicao) {
+  // code
+} else {
+  // code
+}
+
+let hora = 10
+
+if (hora > 6 && hora < 12) {
+  console.log('Bom dia!');
+} else if (hora > 12 && hora < 18) {
+  console.log('Boa tarde!');
+} else {
+  console.log('Boa noite!');
+}
+
+// Switch case
+let permissao
+
+permissao = 'comum'
+
+switch (permissao) {
+  case 'comum'
+  console.log('usuário comum');
+  break
+
+  case 'gerente'
+  console.log('usuário gerente');
+  break
+
+  case 'diretor'
+  console.log('usuário diretor');
+  break
+
+  default:
+  console.log('usuário não reconhecido!');
+}
+
+// Laço For
+
+// 1. For
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+}
+
+
+// 2. While
+let i = 5
+while (i >= 1) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+  i--
+}
+
+
+// 3. Do..while
+let i = 0
+do {
+  console.log('digitando...', i);
+  i++
+} while (i < 100)
+
+
+// 4. For..in
+const pessoa = {
+  nome: 'Pedrinho',
+  idade: 12
+}
+
+for (let chave in pessoa) {
+  console.log(chave, pessoa.nome, pessoa['nome']);
+}
+
+const cores = ['vermelho', 'azul', 'verde']
+
+for (let indice in cores) {
+  console.log(indice, cores[indice]);
+}
+
+
+// 5. For..of
+for (let cor of cores) {
+  console.log(cor);
+}
+
+// Máximo entre dois valores
+
+// Escreva uma função que usa 2 números e retorna o maior entre eles.
+function max(num1, num2) {
+  if (num1 > num2)
+    return num1
+  return num2
+}
+
+// ou
+
+function max(num1, num2) {
+  return num1 > num2 ? num1 : num2
+}
+
+
+// Fizzbuzz
+
+// Se o valor for divisível por 3, então retorne Fizz
+// Se o valor for divisível por 5, então retorne Buzz
+// Se o valor for divisível por 3 e 5, então retorne FizzBuzz
+// Se o valor não for divisível por 3 ou 5, então retorne a entrada
+// Se o valor não é um número, então retorne a mensagem "Não é um número."
+
+function fizzBuzz(entrada) {
+  if (typeof entrada !== 'number')
+    return "Não é um número."
+  if (entrada % 3 === 0 && entrada % 5 === 0)
+    return "FizzBuzz"
+  if (entrada % 3 === 0)
+    return "Fizz"
+  if (entrada % 5 === 0)
+    return "Buzz"
+  return entrada
+}
+
+console.log(fizzBuzz(3));
+console.log(fizzBuzz(5));
+console.log(fizzBuzz(15));
+console.log(fizzBuzz(14));
+
+
+// Medidor de velocidade
+
+// Velocidade máxima de até 70 Km.
+// A cada 5 Km do limite você ganha 1 ponto na carteira.
+// Caso os pontos sejam maior que 12, então retorne a mensagem "Carteira suspensa."
+
+function verificarVelocidade(velocidade) {
+  const velocidadeMaxima = 70
+  const kmPorPonto = 5
+  const limitePontos = 12
+  if (velocidade <= velocidadeMaxima)
+    console.log('OK');
+  else {
+    const pontos = Math.floor((velocidade - velocidadeMaxima) / kmPorPonto)
+    if (pontos >= limitePontos)
+      console.log("Carteira suspensa.");
+    else
+      console.log('Pontos:', pontos);
+  }
+}
+
+verificarVelocidade(82)
+verificarVelocidade(130)
+
+
+// Par ou Impar
+
+function parOuImpar(valor) {
+  return valor % 2 ? 'Impar' : 'Par'
+}
+
+console.log(parOuImpar(0));
+console.log(parOuImpar(1));
+console.log(parOuImpar(2));
+
+// Receber um arrauy de valores e verificar se cada um é par ou impar.
+numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for (numero in numeros) {
+  console.log(numero, parOuImpar(numero));
+}
+
+// Ou
+
+for (let i = 0; i <= 10; i++) {
+  console.log(i, parOuImpar(i))
+}
+
+
+// Encontre o String
+
+// Criar um método para ler propriedades de um objeto e
+// e exibir somente as propriedades do tipo string.
+
+function exibirPropriedades(obj) {
+  for (prop in obj)
+    if (typeof obj[prop] === 'string')
+      console.log(prop, obj[prop]);
+}
+
+const filme = {
+  titulo: 'Vingadores: Ultimato',
+  ano: 2019,
+  diretor: 'Anthony e Joe Russo',
+  personagens: 'Ironman, Capitain America, Thor, Hulk'
+}
+
+exibirPropriedades(filme)
+
+
+// Múltiplos de 3 e 5
+
+// Criar uma função somar que retorna a soma de todos os múltiplos de 3 e 5.
+// Múltiplos de 3: 3, 6, 9
+// Múltiplos de 5: 5, 10
+
+function somar(limite) {
+  let multiplosDeTres = 0
+  let multiplosDeCinco = 0
+  for (i = 0; i <= limite; i++) {
+    if (i % 3 === 0)
+      multiplosDeTres += i
+    if (i % 5 === 0)
+      multiplosDeCinco += i
+  }
+  return multiplosDeTres + multiplosDeCinco
+}
+
+console.log(somar(10));
+
+
+// Média de nota escolar
+
+// Obter a média a partir de um array.
+
+// 0-59: F
+// 60-69: D
+// 70-79: C
+// 80-89: B
+// 90-100: A
+
+const array = [70, 70, 80]
+
+function mediaDoAluno(notas) {
+  let soma = 0
+  for (let nota of notas) {
+    soma += nota
+  }
+  const media = soma / (notas.length)
+
+  if (media < 59) return 'F'
+  if (media < 69) return 'D'
+  if (media < 79) return 'C'
+  if (media < 89) return 'B'
+  return 'A'
+}
+
+console.log(mediaDoAluno(array));
+
+// Refatorando código
+
+function calcularMedia(array) {
+  let soma = 0
+  for (let valor of array) {
+    soma += valor
+  }
+  return soma / (array.length)
+}
+
+function mediaDoAluno(notas) {
+  const media = calcularMedia(notas)
+  if (media < 59) return 'F'
+  if (media < 69) return 'D'
+  if (media < 79) return 'C'
+  if (media < 89) return 'B'
+  return 'A'
+}
+
+const array = [70, 70, 80]
+console.log(mediaDoAluno(array));
+
+
+// Contador de Asteriscos
+
+function imprimirAsteriscos(linhas) {
+  let padrao = ''
+  for (let linha = 1; linha <= linhas; linha++) {
+    padrao += '*'
+    console.log(padrao);
+  }
+}
+
+imprimirAsteriscos(10)
+
+// Ou
+
+function imprimirAsteriscos(linhas) {
+  for (let linha = 1; linha <= linhas; linha++) {
+    let padrao = ''
+    for (let i = 0; i < linha; i++) {
+      padrao += '*'
+    }
+    console.log(padrao);
+  }
+}
+
+imprimirAsteriscos(10)
+
+
+// Números primos
+
+function imprimirNumerosPrimos(limite) {
+  for (let numero = 2; numero <= limite; numero++) {
+    let ehPrimo = true
+    for (let divisor = 2; divisor < numero; divisor++) {
+      if (numero % divisor === 0) {
+        ehPrimo = false
+        break
+      }
+    }
+    if (ehPrimo) console.log(numero);
+  }
+}
+
+imprimirNumerosPrimos(15)
+
+// Ou
+
+function numeroPrimo(numero) {
+  let ehPrimo = true
+  for (let divisor = 2; divisor < numero; divisor++) {
+    if (numero % divisor === 0)
+      return false
+  }
+  return true
+}
+
+function imprimirNumerosPrimos(limite) {
+  for (let numero = 2; numero <= limite; numero++) {
+    if (numeroPrimo(numero)) console.log(numero);
+  }
+}
+
+imprimirNumerosPrimos(15)
+
+
+// Factory Functions
+
+function criarCelular(marcaCelular, tamanhoTela, capacidadeBateria) {
+  return {
+    marcaCelular: marcaCelular,
+    tamanhoTela: tamanhoTela,
+    capacidadeBateria: capacidadeBateria,
+    ligar: function() {
+      console.log('Fazendo ligação...');
+    }
+  }
+}
+
+// Ou
+
+function criarCelular(marcaCelular, tamanhoTela, capacidadeBateria) {
+  return {
+    marcaCelular,
+    tamanhoTela,
+    capacidadeBateria,
+    ligar() {
+      console.log('Fazendo ligação...');
+    }
+  }
+}
+
+const celular = criarCelular('Zenfone', 5.5, 5000)
+console.log(celular);
+
+
+// Constructor Functions
+
+// Pascal Case
+function Celular(marcaCelular, tamanhoTela, capacidadeBateria) {
+  this.marcaCelular = marcaCelular,
+  this.tamanhoTela = tamanhoTela,
+  this.capacidadeBateria = capacidadeBateria,
+  this.ligar = function() {
+    console.log('Fazendo ligação...');
+  }
+}
+
+const celular = new Celular('Asus', 5.5, 5000)
+
+
+// Natureza dinâmica de objetos
+
+const mouse = {
+  cor: 'black',
+  marca: 'Dazz'
+}
+mouse.velocidade = 5000
+mouse.trocarDPI = function() {
+  console.log('Mudando DPI...');
+}
+delete mouse.velocidade;
+console.table(mouse);
+
+
+// Clonando objetos
+
+const celular = {
+  marcaCelular: 'Asus',
+  tamanhoTela: 5.5,
+  ligar: function() {
+    console.log('Fazendo ligação...');
+  }
+}
+
+const novoObjeto = Object.assign({}, celular)
+console.table(novoObjeto);
+
+const novoObjeto2 = Object.assign({
+  capacidadeBateria: 5000,
+}, celular)
+console.table(novoObjeto2);
+
+
+// Spread operator
+
+const novoObjeto3 = {...celular}
+console.log(novoObjeto3);
+
+const novoObjeto4 = {preco: 800, ...celular}
+console.log(novoObjeto4);
+
+
+// Math
+
+Math.random()
+
+Math.max(3,6,9)
+
+
+// String
+
+// Tipo primitivo
+const mensagem = 'Lorem ipsum.'
+
+// Tipo objeto
+const outraMensagem = new String('Bom dia')
+
+outraMensagem.length()
+
+outraMensagem[2]
+
+mensagem.includes('ipsum')
+
+mensagem.startsWith('Lorem')
+
+mensagem.indexOf('ipsum')
+
+mensagem.replace('ipsum', 'ammet')
+
+const mensagem1 = '        Lorem ipsum.      '
+
+mensagem1.trim()  // remove espaços no início e no final.
+
+mensagem.split(' ')
+
+
+// Template Literal
+
+const mensagem = 'Oi isso é a minha\n\'primeira\' mensagem.'
+console.log(mensagem);
+
+const outraMensagem = `Oi isso é a minha
+'primeira' mensagem.`
+console.log(outraMensagem);
+
+const nome = 'Pedrinho'
+console.log(`Oi ${nome}`);
+
+
+// Date
+
+const data1 = new Date()
+
+const data2 = new Date('March 06 2020 22:30')
+
+const data3 = new Date(2020, 10, 1, 22, 15)
+
+data3.setFullYear(2030)
+
+data3.toDateString() // "Fri Nov 01 2030"
+
+data3.toISOString() // "2030-11-02T01:15:00.000Z"
+
+
+// Montador de Endereço
+
+let endereco = {
+  rua: 'Rua Doze de Outubro',
+  cidade: 'São Paulo',
+  cep: '00000-000'
+}
+
+function imprmirEndereco(endereco) {
+  for (let chave in endereco)
+    console.log(chave, endereco[chave]);
+}
+
+imprmirEndereco(endereco)
+
+
+// Encontre a igualdade
+
+function Endereco(rua, cidade, cep) {
+  this.rua = rua,
+  this.cidade = cidade,
+  this.cep = cep
+}
+const endereco1 = new Endereco('a', 'b', 'c')
+const endereco2 = new Endereco('a', 'b', 'c')
+
+function saoIguais(endereco1, endereco2) {
+  // Comparar se as propriedades são iguais.
+  return endereco1.rua === endereco2.rua &&
+    endereco1.cidade === endereco2.cidade &&
+    endereco1.cep === endereco2.cep
+}
+console.log(saoIguais(endereco1, endereco2));
+
+function temEnderecoMemoriaIguais(endereco1, endereco2) {
+  // Comparar se a referência do objeto aponta para o mesmo local na memória.
+  return endereco1 === endereco2
+}
+console.log(temEnderecoMemoriaIguais(endereco1, endereco2));
+
+
+// Ex: Montador de postagem de blog
+
+// Criar um objeto de postagem de blog que vai conter as seguintes propriedades:
+/*
+titulo
+mensagem
+autor
+visualizacoes
+comentarios
+  (autor, mensagem)
+estaAoVivo
+*/
+
+let postagem = {
+  titulo: 'Curso de Javascript',
+  mensagem: 'Lorem ipsum ammet dollor.',
+  autor: 'Pedrinho',
+  visualizacoes: 10,
+  comentarios: [
+    { autor: 'Maria', mensagem: 'Aenean aliquam molestie leo, vitae iaculis nisl.' },
+    { autor: 'Daniel', mensagem: 'Mussum Ipsum, cacilds vidis litro abertis.' },
+  ],
+  estaAoVivo: true,
+}
+
+console.log(postagem);
+
+
+// Ex: Constructor Function
+// Criar um objeto postagem com os dados do exercício anterior.
+
+function Postagem(titulo, mensagem, autor) {
+  this.titulo = titulo,
+  this.mensagem = mensagem,
+  this.autor = autor,
+  this.visualizacoes = 0,
+  this.comentarios = [],
+  this.estaAoVivo = false
+}
+
+let postagem = new Postagem('Curso de Javascript', 'Lorem ipsum ammet dollor.', 'Pedrinho')
+console.log(postagem);
+
+
+// Ex: Faixa de preço
+// Criar um array de objetos de faixa de preço para que possa ser usado em site
+// de produtos e preços.
+// Campos: faixas, tooltip, minimo, maximo
+
+// Primeira opção
+let faixas = [
+  {
+    tooltip: 'até R$ 700',
+    minimo: 0,
+    maximo: 700,
+  },
+  {
+    tooltip: 'de R$ 700 a R$ 1000',
+    minimo: 700,
+    maximo: 1000,
+  },
+  {
+    tooltip: 'R$ 1000 ou mais',
+    minimo: 1000,
+    maximo: 9999999,
+  },
+]
+
+// Segunda opção (Factory Function)
+function criaFaixaPreco(tooltip, minimo, maximo) {
+  return {
+    tooltip,
+    minimo,
+    maximo,
+  }
+}
+
+let faixas2 = [
+  criaFaixaPreco('a', 1, 100),
+  criaFaixaPreco('b', 100, 1000),
+  criaFaixaPreco('c', 1000, 10000),
+]
+
+console.table(faixas);
+console.table(faixas2);
+
+// Terceira opção (Constructor Function)
+function FaixaPreco(tooltip, minimo, maximo) {
+  this.tooltip = tooltip,
+  this.minimo = minimo,
+  this.maximo = maximo
+}
+
+let faixas3 = [
+  new FaixaPreco('d', 10, 20),
+  new FaixaPreco('e', 20, 30),
+  new FaixaPreco('f', 30, 40)
+]
+
+console.table(faixas3);
+
+
+// Arrays
+
+// Adicionar novos elementos
+const numeros = [1, 2, 3]
+
+// Inserir no início
+numeros.unshift(0)
+console.log(numeros);
+
+
+// Inserir no meio
+numeros.splice(1, 0, 'a')
+console.log(numeros);
+
+
+// Inserir no final
+numeros.push(5)
+console.log(numeros);
+
+
+// Encontrar elementos
+const numeros = ['a', 'b', 'c', 'd', 'b', 'e']
+console.log(numeros.indexOf('b'));
+console.log(numeros.indexOf('a'));
+console.log(numeros.indexOf('f'));
+
+console.log(numeros.lastIndexOf('b'));
+
+// Verificar se um número existe
+console.log(numeros.indexOf('a') !== -1);
+console.log(numeros.includes('e'));
+
+// Encontrar elementos por tipo de referência
+const marcas = [
+  { id: 1, nome: 'a' },
+  { id: 2, nome: 'b' },
+  { id: 3, nome: 'c' },
+]
+const marca = marcas.find(function(marca) {
+  return marca.nome == 'c'
+})
+console.log(marca);
+
+// Arrow functions
+const marcas = [
+  { id: 1, nome: 'a' },
+  { id: 2, nome: 'b' },
+  { id: 3, nome: 'c' },
+]
+const marca = marcas.find((marca) => {
+  return marca.nome == 'c'
+})
+console.log(marca);
+
+// ou
+const marca1 = marcas.find(marca => {
+  return marca.nome == 'b'
+})
+console.log(marca1);
+
+// ou
+const marca2 = marcas.find(marca => marca.nome == 'a')
+console.log(marca2);
+
+
+// Remover elementos
+const numeros = [10, 20, 30, 40, 50, 60]
+const ultimo = numeros.pop() // remove no final
+console.log(ultimo);
+
+const primeiro = numeros.shift() // remove no início
+console.log(primeiro);
+console.log(numeros);
+
+const meio = numeros.splice(2, 1) // remove no meio
+console.log(meio);
+console.log(numeros);
+
+
+// Esvaziar um array
+
+// Solução 1
+// Para esvaziar o array usando a atribuição direta você deve usar let.
+let numeros = [10, 20, 30, 40, 50, 60]
+let outros = numeros
+numeros = []
+
+// mas se você tiver feito uma cópia desse array por atribuição direta
+console.log(outros); // ele não vai esvaziar a cópia.
+
+// Solução 2 - solução mais simples
+numeros.length = 0 // com essa técnica você consegue esvaziar todas as referências do array.
+console.log(numeros);
+console.log(outros);
+
+// Solução 3
+numeros.splice(0, numeros.length)
+
+// Solução 4 - mais lento
+while (numeros.length > 0)
+  numeros.pop()
+
+
+// Combinar arrays
+const primeiro = [10, 20, 30]
+const segundo = [100, 200, 300]
+primeiro.concat(segundo)
+
+
+// Dividir arrays
+const valores = ['a', 'b', 'c', 1, 2, 3]
+valores.slice(1, 4)
+
+
+// Spread Operator (ES6)
+const primeiro = [10, 20, 30]
+const segundo = [100, 200, 300]
+const combinado = [...primeiro, ...segundo]
+console.log(combinado);
+
+// Foreach
+const numeros = [10, 20, 30, 40, 50]
+numeros.forEach((numero, indice) => console.log(indice, numero))
+
+
+// Combinando arrays
+const numeros = [10, 20, 30, 40, 50]
+const combinado = numeros.join('.')
+console.log(combinado);
+
+const frase = 'Mussum Ipsum cacilds vidis litro abertis'
+const resultado = frase.split(' ')
+console.log(resultado);
+
+// slug
+resultado.join('-').toLowerCase()
+
+
+// Recebendo dados (input)
+let nome = prompt('Digite seu nome:')
+console.log(nome);
+
+
+// Manipulação do DOM
+// https://devaprender.com/como-criar-um-bot-no-telegram/
+document.getElementById('comment').innerText = "Lorem ipsum"
+
+document.getElementsByClassName('python')[0].innerText = "Javascript"
+
+
+// Segurança virtual
+// Ver index.html
