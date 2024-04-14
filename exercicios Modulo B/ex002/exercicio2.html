@@ -10,15 +10,11 @@
             color: black;
             font-family: Arial, sans-serif;
         }
-        img{
-            height:100% ;
-            width: 100%;
-        }
 
     </style>
 </head>
 <body>
-    <h1>Meu primeiro script em JS</h1>
+    <h1>Meu segundo script em JS</h1>
     <ol>
         <li>Este é um script simples em JavaScript que é executado quando a página HTML é carregada.</li>
         <li>O script começa com a função window.alert(), que exibe uma caixa de diálogo com uma mensagem para o usuário. A mensagem é "Olá, mundo!, este é o meu primeiro script em JS! Ele usa a função window.alert() para mostrar uma mensagem na tela!"</li>
@@ -32,18 +28,18 @@
 </body>
 <script>
     // Exibe uma mensagem de saudação usando a função window.alert()
-    window.alert("Olá, mundo!, este é o meu primeiro script em JS! Ele usa a função window.alert() para mostrar uma mensagem na tela!");
+    window.alert("Olá, mundo!, este é o meu segundo script em JS! Ele usa a função window.alert() para mostrar uma mensagem na tela!");
 
-    // Solicita ao usuário que digite seu nome e armazena-o na variável 'name'
+    // Solicita ao usuário que digite seu nome e sobrenome e armazena-os nas variáveis 'name' e 'nome2'
     var name = window.prompt("Qual é o seu nome?");
-
+    var name2 = window.prompt("Qual é o seu sobrenome?");
     // Exibe uma mensagem de saudação personalizada usando a função window.alert()
-    window.alert("Olá, " + name + "! Seja bem-vindo(a) ao meu primeiro script em JS!");
+    window.alert("Olá, " + name + " " + name2 + "! Seja bem-vindo(a) ao meu primeiro script em JS!");
 
     // Pergunta ao usuário se ele deseja visualizar o código fonte deste script
     if (confirm("Você gostaria de ver o código fonte deste script?")) {
         // Se o usuário clicar em 'OK', abre uma nova janela com o código fonte
-        window.alert("Claro! Vamos lá!");
+        window.alert("Claro! Vamos lá! " + name + " " + name2);
         window.open("view-source:/Users/eltobrgs/Documents/Programaçao/curso-em-video-javascript/exercicios/exercicio1/index.html");
     } 
     else {

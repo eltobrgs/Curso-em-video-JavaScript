@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiro script</title>
+    <style>
+        body {
+            background-color: skyblue;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>este é o exercicio3</h1>
+    
+</body>
+<script>
+    <!-- Exibe uma mensagem de alerta para informar que é uma calculadora de soma de dois números -->
+    window.alert('ola amigos, isto é uma calculadora de soma de dois numeros');
+
+    // Solicita ao usuário que digite o primeiro número e armazena o valor na variável var1
+    var var1 = window.prompt('digite o primeiro numero');
+
+    // Solicita ao usuário que digite o segundo número e armazena o valor na variável var2
+    var var2 = window.prompt('digite o segundo numero');
+
+    // Converte as variáveis var1 e var2 em números inteiros e realiza a soma
+    var vars = Number.parseInt(var1) + Number.parseInt(var2);
+
+    // Exibe uma mensagem de alerta com o resultado da soma dos dois números
+    window.alert(`A soma dos numeros é ${vars}`); // Utiliza a interpolação de strings para exibir o resultado
+
+</script>
+    
+</html>
