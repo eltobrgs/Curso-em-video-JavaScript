@@ -31,20 +31,25 @@
     <img src="code.png" alt="">
 </body>
 <script>
+    // Exibe uma mensagem de saudação usando a função window.alert()
     window.alert("Olá, mundo!, este é o meu primeiro script em JS! Ele usa a função window.alert() para mostrar uma mensagem na tela!");
-    var name= window.prompt("Qual é o seu nome?");
+
+    // Solicita ao usuário que digite seu nome e armazena-o na variável 'name'
+    var name = window.prompt("Qual é o seu nome?");
+
+    // Exibe uma mensagem de saudação personalizada usando a função window.alert()
     window.alert("Olá, " + name + "! Seja bem-vindo(a) ao meu primeiro script em JS!");
-    //se o usuário clicar em ok ele abre a janela com o código fonte
+
+    // Pergunta ao usuário se ele deseja visualizar o código fonte deste script
     if (confirm("Você gostaria de ver o código fonte deste script?")) {
+        // Se o usuário clicar em 'OK', abre uma nova janela com o código fonte
         window.alert("Claro! Vamos lá!");
-        window.open("view-source:/Users/eltobrgs/Documents/Programaçao/curso-em-video-javascript/exercicios/exercicio1/index.html");} 
-    //se o usuário clicar em cancelar ele fecha a janela
-    else {
+        window.open("view-source:/Users/eltobrgs/Documents/Programaçao/curso-em-video-javascript/exercicios/exercicio1/index.html");
+    } else {
+        // Se o usuário clicar em 'Cancelar', fecha a janela
         window.alert("Tudo bem! Até a próxima!");
         window.close();
     }
-
-    
-    
 </script>
+    
 </html>
