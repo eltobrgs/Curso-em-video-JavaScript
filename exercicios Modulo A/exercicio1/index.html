@@ -34,9 +34,11 @@
     window.alert("Olá, mundo!, este é o meu primeiro script em JS! Ele usa a função window.alert() para mostrar uma mensagem na tela!");
     var name= window.prompt("Qual é o seu nome?");
     window.alert("Olá, " + name + "! Seja bem-vindo(a) ao meu primeiro script em JS!");
+    //se o usuário clicar em ok ele abre a janela com o código fonte
     if (confirm("Você gostaria de ver o código fonte deste script?")) {
         window.alert("Claro! Vamos lá!");
         window.open("view-source:/Users/eltobrgs/Documents/Programaçao/curso-em-video-javascript/exercicios/exercicio1/index.html");} 
+    //se o usuário clicar em cancelar ele fecha a janela
     else {
         window.alert("Tudo bem! Até a próxima!");
         window.close();
