@@ -10,11 +10,27 @@
             color: black;
             font-family: Arial, sans-serif;
         }
+        span{
+            color: red;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
 
     </style>
 </head>
 <body>
     <h1>este é o exercicio3</h1>
+    <ol>
+        <li>O script começa com a exibição de uma caixa de diálogo de alerta para o usuário, informando que o script é uma calculadora de soma de dois números. <br><span>window.alert('ola amigos, isto é uma calculadora de soma de dois numeros');</span></li>
+        <li>Em seguida, o método window.prompt é usado para solicitar ao usuário que insira o primeiro número. O valor inserido é então armazenado na variável var1. <br><span>var var1 = window.prompt('digite o primeiro numero');</span></li>
+        <li>O método `window.prompt` é usado novamente para solicitar ao usuário que insira o segundo número. O valor inserido é armazenado na variável `var2`. <br><span>var var2 = window.prompt('digite o segundo numero');</span></li>
+        <li>As variáveis `var1` e `var2` são convertidas em números inteiros usando o método `Number.parseInt`. Em seguida, os dois números são somados e o resultado é armazenado na variável `vars`. <br>  <span>var vars = Number.parseInt(var1) + Number.parseInt(var2);</span></li>
+        <li>Finalmente, uma caixa de diálogo de alerta é exibida para o usuário com o resultado da soma dos dois números. A interpolação de strings é usada aqui para inserir o valor da variável `vars` na string. <br><span>window.alert(`A soma dos numeros é ${vars}`);</span> </li>
+    </ol>
+    <p>a seguir está o codigo</p>
+    <img src="code.png" alt="">
     
 </body>
 <script>
@@ -32,7 +48,6 @@
 
     // Exibe uma mensagem de alerta com o resultado da soma dos dois números
     window.alert(`A soma dos numeros é ${vars}`); // Utiliza a interpolação de strings para exibir o resultado
-
 </script>
     
 </html>
