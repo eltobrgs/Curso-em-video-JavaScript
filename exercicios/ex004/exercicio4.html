@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: skyblue;
+            color: black;
+            font-family: Arial, sans-serif;
+            font-size: 1.2em;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        span{
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>este é o exercicio4</h1>
+    <p>Este script solicita ao usuário que insira seu nome, idade e saldo bancário, e em seguida exibe várias informações com base nas entradas do usuário.</p>
+    <ol>
+        <li><span>window.prompt('mensagem')</span>: Esta função exibe uma caixa de diálogo que solicita ao usuário que insira algum texto. A mensagem fornecida é exibida na caixa de diálogo.</li>
+        <li><span>document.write('mensagem')</span>: Esta função escreve uma string de texto em um documento HTML. Se o documento já foi processado, a função <span>document.write()</span> irá sobrescrever o conteúdo existente.</li>
+        <li><span>nome.length</span>: Esta propriedade retorna o número de caracteres na string <span>nome</span>.</li>
+        <li><span>nome.toUpperCase()</span>: Esta função retorna a string <span>nome</span> convertida em letras maiúsculas.</li>
+        <li><span>nome.toLowerCase()</span>: Esta função retorna a string <span>nome</span> convertida em letras minúsculas.</li>
+        <li><span>nome.split(' ')</span>: Esta função divide a string <span>nome</span> em um array de substrings, usando um espaço como separador.</li>
+        <li><span>nome.join('')</span>: Esta função junta os elementos de um array em uma única string, sem nenhum caractere entre eles.</li>
+        <li><span>nome.charAt(0)</span>: Esta função retorna o caractere na posição especificada (neste caso, 0) na string <span>nome</span>.</li>
+        <li><span>nome.slice(0,3)</span>: Esta função retorna uma substring da string <span>nome</span>, começando na posição 0 e terminando antes da posição 3.</li>
+        <li><span>nome.slice(-3)</span>: Esta função retorna uma substring da string <span>nome</span>, começando na terceira posição a partir do final da string e indo até o final da string.</li>
+        <li><span>nome.slice(2)</span>: Esta função retorna uma substring da string <span>nome</span>, começando na posição 2 e indo até o final da string.</li>
+        <li><span>Number.parseInt(idade)</span>: Esta função converte a string <span>idade</span> em um número inteiro.</li>
+        <li><span>(banco*0.9).toFixed(2)</span>: Esta expressão primeiro multiplica o valor de <span>banco</span> por 0.9, e então usa a função <span>toFixed(2)</span> para formatar o resultado como uma string com duas casas decimais.</li>
+    </ol>
+
+    <script>
+
+    // Solicite ao usuário que digite seu nome
+    var nome = window.prompt('digite seu nome');
+    
+    // Solicite ao usuário que digite sua idade
+    var idade = window.prompt('digite sua idade');
+    
+    // Solicite ao usuário que digite seu saldo bancário
+    var banco = Number(window.prompt('digite quanto você tem no banco'));
+    
+    
+    // Exiba uma mensagem de saudação com o nome e idade do usuário
+    document.write(`Olá, ${nome}! Você tem ${idade} anos.<br/>`);
+
+    // Exiba o tamanho do nome do usuário
+    document.write(`Seu nome tem ${nome.length} letras<br/>`);
+
+    // Exiba o nome do usuário em letras maiúsculas
+    document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br/>`);
+
+    // Exiba o nome do usuário em letras minúsculas
+    document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}<br/>`);
+
+    // Exiba o tamanho do nome do usuário sem contar os espaços
+    document.write(`Seu nome tem ${nome.split(' ').join('').length} letras sem contar os espaços<br/>`);
+
+    // Exiba a primeira letra do nome do usuário
+    document.write(`A primeira letra do seu nome é: ${nome.charAt(0)}<br/>`);
+
+    // Exiba as três primeiras letras do nome do usuário
+    document.write(`As primeiras 3 letras do seu nome são: ${nome.slice(0,3)}<br/>`);
+
+    // Exiba as três últimas letras do nome do usuário
+    document.write(`As últimas 3 letras do seu nome são: ${nome.slice(-3)}<br/>`);
+
+    // Exiba as letras do nome do usuário a partir da terceira letra
+    document.write(`As letras do seu nome a partir da terceira letra são: ${nome.slice(2)}<br/>`);
+
+    // Exiba a idade do usuário e a idade após 5 anos
+    document.write(`Você tem ${idade} anos, daqui a 5 anos você terá ${Number.parseInt(idade)+5} anos<br/>`);
+
+    // Exiba o saldo bancário do usuário e o saldo após gastar 10%
+    document.write(`Você tem ${banco}R$ no banco, se você gastar 10% você ficará com ${(banco*0.9).toFixed(2)}R$<br/>`);
+
+
+    </script>
+</body>
+
+</html>
