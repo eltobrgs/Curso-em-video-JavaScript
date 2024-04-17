@@ -10,12 +10,12 @@ console.log("not:", not); // Imprime o valor de not no console
 
 //expressoes lógicas
 let idade = 16;
-let estado = 'SP';
+let estado = 'MG';
 let salario = 2000;
 let sexo = 'M';
-idade>=15 && idade<=17 //idade entre 15 e 17
-estado=='SP' || estado=='RJ' //estado é SP ou RJ
-salario>1500 && sexo!='M' //salario maior que 1500 e sexo diferente de masculino
+console.log("idade entre 15 e 17:", idade>=15 && idade<=17);
+console.log("estado é SP ou RJ:", estado=='SP' || estado=='RJ');
+console.log("salário maior que 1500 e sexo diferente de masculino:", salario>1500 && sexo!='M');
 
 // Exemplo lúdico:
 // Imagine que você está organizando uma festa e precisa verificar se todas as condições estão satisfeitas para que a festa aconteça.
@@ -55,3 +55,5 @@ let permissaoAdministrador = true;
 let semPermissao = !permissaoAdministrador;
 
 console.log("O usuário tem permissão?", semPermissao); // Imprime o valor de semPermissao no console
+
+
