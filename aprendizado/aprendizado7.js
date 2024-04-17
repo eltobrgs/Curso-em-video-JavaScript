@@ -1,8 +1,11 @@
 
-// Operador Ternário:
+// Operador Ternário: (condição) ? 'Valor para verdadeiro' : 'Valor para falso'
+/* O operador ternário é uma forma concisa de escrever uma instrução if-else. */
 let idade = 18;
 let status = (idade >= 18) ? 'Maior de idade' : 'Menor de idade'; // (status será igual a 'Maior de idade')
 console.log("status:", status); // Imprime o valor de status no console
+/*pode ser lido como: se idade for maior ou igual a 18, 
+então status será maior de idade, caso contrario, status é definido como menor de idade */
 
 // Operador de Concatenação:
 let nome = 'João';
