@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando numeros</title>
+    <style>
+        body{
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            font: normal 20px Arial, sans-serif;
+        }
+        input{
+            background-color: rgb(54, 125, 54);
+            color: white;
+            font-size: 20px;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            min-width: 30%;
+            
+        }
+        input::placeholder {
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>SOMANDO VALORES</h1>
+    <p>Informe dois valores para que possamos somá-los</p>
+    <div> 
+        <input type="number" name="txtn1" id="txtn1" placeholder="Digite o primeiro número"> +
+        <input type="number" name="txtn2" id="txtn2" placeholder="Digite o segundo número">
+        <input type="button" value="somar" id="soma" onclick="somar()">
+    </div>
+    <div id="res">Resultado =</div>
+    
+    <script>
+        // Função para realizar a adição
+        function somar(){
+            // Obter os elementos de input pelos seus IDs
+            var tn1 = window.document.getElementById('txtn1');
+            var tn2 = window.document.getElementById('txtn2');
+            // Obter o elemento de resultado pelo seu ID
+            var res = window.document.getElementById('res');
+            // Converter os valores de input para números
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            // Realizar a adição
+            var s = n1 + n2;
+            // Exibir o resultado no elemento de resultado
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+
+
+            
+        }
+    </script>
+    
+</body>
+</html>
