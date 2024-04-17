@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiro script em JS</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        img{
+            width: 40%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando meus estudos com DOM</h1> 
+    <p>aqui vai o resultado </p>
+    <p>aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="MSG">Clique em mim!!</div>
+    <div id="area"> Clique em mim tambem!!</div>
+    <img src="code.png" alt="">
+    
+    <script>
+        // Escreve "Olá, mundo!" no documento
+        window.document.write('<br> Olá, mundo!');
+
+        // Escreve "Estou aprendendo a usar o DOM" no documento
+        window.document.write('<br>Estou aprendendo a usar o DOM');
+
+        // Escreve a URL do site no documento
+        window.document.write('<br>A URL do site é: ' + window.location.href);
+
+        // Escreve o título da página no documento
+        window.document.write('<br>O título da página é: ' + window.document.title);
+
+        // Obtém o segundo parágrafo usando a tag 'p' e define algumas propriedades de estilo
+        var p1 = window.document.getElementsByTagName('p')[1];
+        p1.style.color = 'red';
+        p1.style.fontSize = '20px';
+        p1.style.fontWeight = 'bold';
+
+        // Escreve no documento o conteúdo do segundo parágrafo
+        window.document.write('<br> o segundo paragrafo está escrito assim: ' + p1.innerHTML);
+
+        // Obtém o elemento com o id 'MSG' e define algumas propriedades de estilo
+        var msg = window.document.getElementById('MSG');
+        msg.style.backgroundColor = 'green';
+        msg.innerText = 'Clique em mim, estou aguardando!!!!!!';
+
+        // Define um evento de clique para o elemento 'MSG'
+        msg.onclick = function(){
+            msg.style.backgroundColor = 'purple';
+            msg.innerText = 'Obrigado por clicar em mim!!!';
+        }
+
+        // Obtém o elemento com o seletor 'div#area' e define algumas propriedades de estilo
+        var area = window.document.querySelector('div#area');
+        area.style.backgroundColor = 'yellow';
+        area.style.color = 'black';
+
+        // Define um evento de clique para o elemento 'area'
+        area.onclick = function(){
+            area.style.backgroundColor = 'red';
+            area.style.color = 'blue';
+            area.innerText = 'Obrigado por clicar em mim, eu tambem queria!!!';
+        }
+
+
+    </script>
+    </script>
+</body>
+    
+</html>

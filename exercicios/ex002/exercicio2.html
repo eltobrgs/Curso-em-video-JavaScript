@@ -29,28 +29,29 @@
         <li>Se o usuário clicar em "Cancelar", uma mensagem de despedida será exibida e a janela atual será fechada usando a função window.close().</li>
     </ol>
     <img src="code.png" alt="">
+    <script>
+        // Exibe uma mensagem de saudação usando a função window.alert()
+        window.alert("Olá, mundo!, este é o meu segundo script em JS! Ele usa a função window.alert() para mostrar uma mensagem na tela!");
+    
+        // Solicita ao usuário que digite seu nome e sobrenome e armazena-os nas variáveis 'name' e 'nome2'
+        var name = window.prompt("Qual é o seu nome?");
+        var name2 = window.prompt("Qual é o seu sobrenome?");
+        // Exibe uma mensagem de saudação personalizada usando a função window.alert()
+        window.alert("Olá, " + name + " " + name2 + "! Seja bem-vindo(a) ao meu primeiro script em JS!");
+    
+        // Pergunta ao usuário se ele deseja visualizar o código fonte deste script
+        if (confirm("Você gostaria de ver o código fonte deste script?")) {
+            // Se o usuário clicar em 'OK', abre uma nova janela com o código fonte
+            window.alert("Claro! Vamos lá! " + name + " " + name2);
+            window.open("view-source:/Users/eltobrgs/Documents/Programaçao/curso-em-video-javascript/exercicios/exercicio1/index.html");
+        } 
+        else {
+            // Se o usuário clicar em 'Cancelar', fecha a janela
+            window.alert("Tudo bem! Até a próxima!");
+            window.close();
+        }
+    </script>
 </body>
-<script>
-    // Exibe uma mensagem de saudação usando a função window.alert()
-    window.alert("Olá, mundo!, este é o meu segundo script em JS! Ele usa a função window.alert() para mostrar uma mensagem na tela!");
 
-    // Solicita ao usuário que digite seu nome e sobrenome e armazena-os nas variáveis 'name' e 'nome2'
-    var name = window.prompt("Qual é o seu nome?");
-    var name2 = window.prompt("Qual é o seu sobrenome?");
-    // Exibe uma mensagem de saudação personalizada usando a função window.alert()
-    window.alert("Olá, " + name + " " + name2 + "! Seja bem-vindo(a) ao meu primeiro script em JS!");
-
-    // Pergunta ao usuário se ele deseja visualizar o código fonte deste script
-    if (confirm("Você gostaria de ver o código fonte deste script?")) {
-        // Se o usuário clicar em 'OK', abre uma nova janela com o código fonte
-        window.alert("Claro! Vamos lá! " + name + " " + name2);
-        window.open("view-source:/Users/eltobrgs/Documents/Programaçao/curso-em-video-javascript/exercicios/exercicio1/index.html");
-    } 
-    else {
-        // Se o usuário clicar em 'Cancelar', fecha a janela
-        window.alert("Tudo bem! Até a próxima!");
-        window.close();
-    }
-</script>
     
 </html>
