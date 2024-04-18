@@ -1,12 +1,20 @@
 function carregar() {
+    // Obtém a data e hora atual
     var agora = new Date();
+    // Obtém a hora atual
     var hora = agora.getHours();
+    // Obtém a segunda tag <p> do documento
     var saudacao = document.getElementsByTagName('p')[1];
+    // Obtém a primeira tag <p> do documento
     var horario = document.getElementsByTagName('p')[0];
+    // Define o conteúdo da primeira tag <p> com a hora atual
     horario.innerHTML = `Agora são <strong>${hora}</strong> horas.`;
+    // Obtém o elemento de imagem com o ID 'imagemDoDia'
     var imagemDoDia = document.getElementById('imagemDoDia');
+    // Obtém o elemento <body> do documento
     var background = document.getElementsByTagName('body')[0];
     
+    // Verifica a hora atual e define a saudação, imagem e cor de fundo correspondentes
     if (hora < 5) {
         saudacao.innerHTML = 'Boa madrugada!';
         imagemDoDia.src = 'image/madrugada.png';
