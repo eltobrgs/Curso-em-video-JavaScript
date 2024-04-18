@@ -32,6 +32,32 @@ if (nota >= 90) {
   console.log("Você precisa estudar mais.");
 }
 
+console.log("Este é um exemplo de condição em JavaScript: com switch");
+
+let diaDaSemana = "quarta";
+
+switch (diaDaSemana) {
+  case "segunda":
+    console.log("Hoje é segunda-feira.");
+    break;
+  case "terça":
+    console.log("Hoje é terça-feira.");
+    break;
+  case "quarta":
+    console.log("Hoje é quarta-feira.");
+    break;
+  case "quinta":
+    console.log("Hoje é quinta-feira.");
+    break;
+  case "sexta":
+    console.log("Hoje é sexta-feira.");
+    break;
+  default:
+    console.log("Hoje é um dia do fim de semana.");
+    break;
+}
+
+
 
 /*Neste exemplo, a nota é verificada em três condições diferentes. Se a nota for maior ou igual a 90, a mensagem:
 "Você tirou uma nota excelente!" será exibida. Se a nota for maior ou igual a 70, a mensagem "Você tirou uma nota boa."

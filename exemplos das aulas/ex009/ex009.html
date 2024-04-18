@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voce é estrangeiro?</title>
+</head>
+<body>
+    <!-- Esta é a seção de corpo do documento HTML -->
+    <h1>Voce é estrangeiro?</h1>
+    <!-- Este é um cabeçalho que pergunta se a pessoa é estrangeira -->
+    De que país você vem?: <input type="text" id="textp">
+    <!-- Este é um campo de entrada de texto onde o usuário pode digitar seu país -->
+    <div id="res"></div>
+    <!-- Este é um elemento div vazio onde o resultado será exibido -->
+    Clique aqui para verificar se você é estrangeiro: <input type="button" value="Verificar" onclick="clicar()">
+    <!-- Este é um botão que aciona a função 'clicar' quando clicado -->
+    <script>
+        // Este é um bloco de código JavaScript
+        function clicar(){
+            // Esta é uma função chamada 'clicar'
+            var textp = window.document.getElementById('textp')
+            // Esta linha obtém o elemento de entrada com o id 'textp' e o atribui à variável 'textp'
+            var res = window.document.getElementById('res')
+            // Esta linha obtém o elemento div com o id 'res' e o atribui à variável 'res'
+            var pais = textp.value
+            // Esta linha obtém o valor digitado no campo de entrada e o atribui à variável 'pais'
+            res.innerHTML = `<p>Voce vem do país: ${pais}</p>`
+            // Esta linha define o innerHTML do div 'res' para exibir o país digitado pelo usuário
+            if(pais == 'Brasil' || pais == 'brasil' || pais == 'BRASIL' || pais == 'Br' || pais == 'br' || pais == 'BR'){
+                // Esta condição verifica se o país é Brasil em diferentes formatos
+                res.innerHTML += `<p>Voce é brasileiro</p>`
+                // Se a condição for verdadeira, adiciona um parágrafo ao div 'res' dizendo que a pessoa é brasileira
+            }else{
+                // Se a condição for falsa, significa que a pessoa é estrangeira
+                res.innerHTML += `<p>Voce é estrangeiro</p>`
+                // Adiciona um parágrafo ao div 'res' dizendo que a pessoa é estrangeira
+            }
+        }
+    </script>
+</body>
+</html>

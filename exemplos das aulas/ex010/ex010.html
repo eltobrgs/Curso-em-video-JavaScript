@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <!-- Este é o cabeçalho da página da web -->
+    <h1>SISTEMA DE MULTAS</h1>
+    
+    <!-- Este é um parágrafo explicando o propósito da atividade -->
+    <p>Essa atividade é nada mais nada menos que o exercício 8 em forma de website</p>
+    
+    <!-- Este é um campo de entrada para inserir a velocidade do carro -->
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> KM/H
+    
+    <!-- Este é um botão para acionar o processo de verificação -->
+    <input type="button" value="Verificar" onclick="clicar()">
+    
+    <!-- Este é um contêiner para exibir os resultados -->
+    <div id="res"></div>
+    
+    <!-- Este é um script para lidar com o evento de clique do botão -->
+    <script>
+        function clicar(){
+            // Obtenha os elementos do campo de entrada e do contêiner de resultados
+            var txtvel = document.getElementById('txtvel');
+            var res = document.getElementById('res');
+            
+            // Obtenha a velocidade do carro do campo de entrada
+            var vel = Number(txtvel.value);
+            
+            // Exiba a velocidade do carro e a velocidade permitida
+            res.innerHTML = `<p>Sua velocidade atual é de ${vel} KM/H</p>`;
+            res.innerHTML += `<p>Velocidade permitida: 60 KM/H</p>`;
+            
+            // Verifique se a velocidade do carro excede a velocidade permitida
+            if(vel > 60){
+                res.innerHTML += `<p>Você ultrapassou a velocidade permitida, MULTADO!</p>`;
+            }else{
+                res.innerHTML += `<p>Você está dentro da velocidade permitida, PARABÉNS!</p>`;
+            }
+        }
+    </script>
+</body>
+</body>
+</body>
+</html>
