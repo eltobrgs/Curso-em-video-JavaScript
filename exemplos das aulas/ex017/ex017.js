@@ -53,8 +53,11 @@ function fatorialRecursivoSimplificado(n){
 console.log("o fatorial de 15 é: "+fatorialRecursivoSimplificado(15))
 
 //função dentro de variavel
-let func= function(x){
+let mult= function(x){
     return x*2
 }
-console.log(func(5))
+console.log(mult(5))
 
+//Arrow function
+const div = (a, b) => a / b;
+console.log(div(15, 3)); // Output: 5
