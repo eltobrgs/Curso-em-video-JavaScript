@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modelo de exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de números</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Número de 1 à 100:<input type="number" name="number" id="number">
+                <input type="button" value="Inserir número" onclick="adcnumber()">
+            </p>
+        </div>
+        <div>
+            <select name="lista" id="result" size="10" >
+                <option>LISTA</option>
+            </select>
+        </div>
+        <div>
+            <p>
+                <input type="button" value="Analisar" onclick="analisar()">
+            </p>
+        </div>
+        <div id="res"></div>
+    </section>
+    <footer>
+        <p>&copy; Eltobrgs</p>
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
